@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="quiz_header">
+      <img class="quiz_logo" src="img/quizapp logo.png" alt="" />
+      <span>uiz App</span>
+    </header>
+    <button id="btnStart">
+      <i class="fa-regular fa-circle-play" style="font-size: 5rem"></i>
+      <span>&nbsp</span> Başla
+    </button>
+    <div class="card">
+      <div class="card_header">
+        <h3>Genel Kültür</h3>
+        <div class="card_header_center">
+          <span id="kalanSure">Kalan Süre:</span><span id="sure">10</span>
+        </div>
+        <div class="card_header_right">
+          <div class="baslangic"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+      </div>
+      <div>
+        <div id="sureAnimasyon"><div id="sureAnimasyonIci"></div></div>
+      </div>
+      <div class="card_body">
+        <h4><span id="soruSayisi"></span><span id="soru"></span></h4>
+        <ul class="secenekler">
+          <!-- <li class="secenek correct" onclick="cevapKontrol()">
+            <span id="cevap"></span
+            ><span id="correctIcon"><i class="fa-solid fa-check"></i></span>
+          </li> -->
+          <!-- <li class="secenek incorrect">
+            <span id="cevap"></span
+            ><span id="incorrectIcon"><i class="fa-solid fa-xmark"></i></span>
+          </li>
+          <li class="secenek selected">
+            <span id="cevap"></span><i class="fa-solid fa-xmark"></i>
+          </li>
+          <li class="secenek incorrect">
+            <span id="cevap"></span><i class="fa-solid fa-xmark"></i>
+          </li> -->
+        </ul>
+      </div>
+      <div class="card_footer">
+        <div class="soruSayac">
+          <span id="soruSayaci"></span><span>/</span
+          ><span id="toplamSoruSayaci"></span>
+        </div>
+
+        <button id="sonrakiSoru" class="gizli">Sonraki Soru</button>
+      </div>
+    </div>
+    <div class="bitis_card gizli">
+      <div class="bitis_card_logo">
+        <i class="fa-regular fa-face-smile"></i>
+      </div>
+      <div class="bitis_card_yazi">
+        <h2>
+          Tebrikler <span id="sorudan"></span> sorudan
+          <span id="dogrum"></span> doğru yaptınız.
+        </h2>
+      </div>
+      <div class="bitis_card_buton">
+        <button class="tekrar">Tekrar Başlat</button>
+        <button class="bitir">Testi Bitir</button>
+      </div>
+    </div>
+    <script src="soru.js"></script>
+    <script src="quiz.js"></script>
+    <script src="tanimlama.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

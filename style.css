@@ -1,0 +1,347 @@
+html {
+  font-size: 10px;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Wix Madefor Display", sans-serif;
+}
+body {
+  background-color: #f0caa3;
+}
+#btnStart {
+  padding: 2.5rem 5rem;
+  font-size: 3rem;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 2rem;
+  background-color: #453c67;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#btnStart:hover {
+  opacity: 0.9;
+}
+
+.quiz_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+}
+.quiz_header img {
+  width: auto;
+  height: 10rem;
+  animation: logo_animate 1.4s infinite;
+}
+@keyframes logo_animate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.quiz_header span {
+  font-size: 4rem;
+  color: black;
+}
+.card.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.card {
+  width: 900px;
+  border: 1px solid black;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  background-color: #ececec;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.7);
+  transition: all 0.3s ease;
+}
+.card_header {
+  border-bottom: 1px solid black;
+  padding: 1.7rem;
+  background-color: #c3c4c7;
+  border-radius: 20px 20px 0 0;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0;
+}
+.card_header h3 {
+  width: 33%;
+  cursor: default;
+}
+.card_header_center {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  cursor: default;
+}
+.card_header_right {
+  width: 33%;
+  display: flex;
+  justify-content: right;
+}
+#kalanSure {
+  background-color: #c0e7e5;
+  padding: 5px 7px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid darkblue;
+  border-right: 0;
+  font-size: 2.7rem;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+#sure {
+  background-color: rgb(255, 255, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 45px;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid darkblue;
+  border-left: 0;
+  font-size: 2.7rem;
+  pointer-events: none;
+}
+#sureAnimasyon {
+  width: 100%;
+  height: 7px;
+}
+#sureAnimasyonIci {
+  height: 100%;
+  background-color: rgb(63, 29, 187);
+}
+.baslangic {
+  background-color: white;
+  padding: 0px 15px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.baslangic:hover {
+  background-color: red;
+  box-shadow: inset 0px 20px 30px -15px rgba(0, 0, 0, 0.75);
+}
+.card_body {
+  padding: 2rem;
+  font-size: 2rem;
+  cursor: default;
+}
+.secenekler {
+  list-style: none;
+}
+.secenek {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.9rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.secenek:hover {
+  background-color: #e5ff00;
+}
+.card_footer {
+  padding: 0.7rem 2rem;
+  background-color: #d4d4d4;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default;
+}
+.card_footer .soruSayac {
+  background-color: #453c67;
+  color: white;
+  padding: 3px 10px;
+  font-size: 1.3rem;
+  border-radius: 7px;
+}
+.card_footer button {
+  background-color: #6c00ff;
+  color: white;
+  padding: 10px 20px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.fa-check,
+.fa-xmark {
+  font-size: 2.2rem;
+}
+.correct {
+  background-color: #b6b300;
+}
+.incorrect {
+  background-color: #fcb6b0;
+}
+.selected {
+  background-color: #e5ff00;
+}
+.none {
+  display: none;
+}
+.disabled {
+  pointer-events: none;
+}
+.gizli {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50) scale(0.7);
+}
+.bitis_card {
+  padding: 30px 70px;
+  background-color: #fff;
+  display: inline-block;
+  background-color: #eee3d8;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.4s;
+}
+.bitis_card_logo {
+  font-size: 8rem;
+  color: rgb(128, 128, 65);
+  text-align: center;
+  padding: 10px;
+}
+.bitis_card_yazi {
+  text-align: center;
+  border: 2px solid blue;
+  padding: 15px 15px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  pointer-events: none;
+}
+.bitis_card_buton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.bitis_card_buton .tekrar,
+.bitis_card_buton .bitir {
+  width: 120px;
+  height: 40px;
+  overflow: hidden;
+  background-color: #453c67;
+  color: #fff;
+  border: 0px;
+  border-radius: 6px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.bitis_card_buton .tekrar:hover,
+.bitis_card_buton .bitir:hover {
+  background-color: #5d518a;
+}
+@media (max-width: 910px) {
+  #kalanSure {
+    font-size: 1.8rem;
+  }
+  .card {
+    width: 98%;
+  }
+  .bitis_card {
+    width: 98%;
+    padding: 20px 40px;
+  }
+}
+@media (max-width: 410px) {
+  .tekrar,
+  .bitir {
+    font-size: 1.2rem !important;
+    width: 90px !important;
+    height: 30px !important;
+  }
+  .bitis_card {
+    width: 98%;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 530px) {
+  #kalanSure {
+    width: 100px !important;
+    font-size: 1.4rem !important;
+  }
+  #sure {
+    font-size: 1.5rem !important;
+    width: 25px !important;
+  }
+}
+@media (min-height: 720px) {
+  .quiz_header .quiz_logo {
+    height: 140px;
+    width: auto;
+  }
+  .quiz_header span {
+    font-size: 6rem;
+  }
+}
+@media (max-height: 720px) {
+  .quiz_logo {
+    height: 70px !important;
+    width: auto;
+  }
+  .card_header {
+    border-bottom: 1px solid black;
+    padding: 0.7rem;
+    background-color: #c3c4c7;
+    border-radius: 20px 20px 0 0;
+    font-size: 1.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0;
+  }
+  #kalanSure,
+  #sure {
+    font-size: 1.9rem;
+    height: 30px;
+  }
+  .secenek {
+    padding: 0.5rem;
+    margin-bottom: 0;
+  }
+  .secenekler {
+    padding: 0.5rem;
+  }
+  .card_body {
+    padding: 0.5rem;
+  }
+  .card_body h4 {
+    padding: 0;
+  }
+}
